@@ -1,18 +1,12 @@
-<h1>Практическое задание 3</h1>
+<h1>Практическое задание 4</h1>
 
-<h2>Счетчик</h2>
-<app-counter></app-counter>
+<nav>
+  <a routerLink="/contact">Contact</a> |
+  <a routerLink="/about">About</a> |
+  <a [routerLink]="['/item', 1, 'details']">Item 1 Details</a> |
+  <a [routerLink]="['/item', 1, 'list']" [queryParams]="{ list: 1, enable: true }">Item 1 List</a>
+</nav>
 
-<h2>Список товаров</h2>
-<ul>
-  <li *ngFor="let product of products">
-    ID: {{ product.id }} | Название: {{ product.name }} | Цена: {{ product.price }}
-  </li>
-</ul>
+<hr>
 
-<h2>Дата</h2>
-<p>{{ currentDate | date:'dd/MM/yyyy' }}</p>
-
-<h2>Свой pipe</h2>
-<p>Исходное число: {{ currentNumber }}</p>
-<p>После pipe: {{ currentNumber | addFive }}</p>
+<router-outlet></router-outlet>

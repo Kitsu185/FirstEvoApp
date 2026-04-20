@@ -1,0 +1,8 @@
+<h2>Item component</h2>
+
+<nav>
+  <a [routerLink]="['details']">Details</a> |
+  <a [routerLink]="['list']" [queryParams]="{ list: 1, enable: true }">List</a>
+</nav>
+
+<router-outlet></router-outlet>
